@@ -16,6 +16,9 @@ export class Cliente {
     @Column({length: 200})
     email: string
 
+    @Column()
+    userId: number
+
     @OneToOne(() => User)
     @JoinColumn()
     user: User

@@ -11,8 +11,10 @@ app.use(express.json());
 
 // rotas
 import userRouter from "./routes/user.routes";
+import clienteRouter from "./routes/cliente.routes";
 
 app.use("/users", userRouter);
+app.use("/clientes", clienteRouter);
 
 AppDataSource.initialize().then(async () => {
 
